@@ -1,0 +1,219 @@
+
+header{
+    overflow: auto;
+}
+
+h2{
+    display: inline-block;
+}
+#usuario,#login{
+    display: block;
+    flex-direction: column;
+    float: right;
+    position: relative;
+}
+#login input{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#login #botones{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+#titulo{
+    margin-right: 300px;
+    text-align: center;
+}
+
+form{
+    display: inline-flex;
+    flex-direction: column;
+ 
+}
+ label, input #form{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#formulario{
+    display: inline-flex;
+    flex-direction: column;
+    column-span: all;
+
+}
+
+.boton_formulario{
+    border:1px solid black;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px;
+    background-color: #eee;
+    text-decoration: none;
+    color:black;
+
+}
+.fotos_articulo{
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+.articulo_listado{
+    float: left;
+    min-height: 200px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    width: 150px;
+}
+.papelera{
+    height: 20px;
+    opacity: 0.5;
+}
+.papelera:hover{
+    opacity: 1;
+}
+.borrar_articulo{
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    width: 20px;
+    height: 20px;
+}
+main{
+    overflow: auto;
+}
+.precio_articulo{
+
+    font-weight: bold;
+    color:#f00;
+    width: 100px;
+    padding: 3px;
+    text-align: center;
+    margin: auto;
+    font-family: verdana;
+}
+.contactar{
+    font-size: 1em;
+    font-weight: bold;
+    color:#00f;
+    border: 1px solid black;
+    width: 120px;
+    padding: 3px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 5px auto;   
+    font-family: verdana;
+}
+.contactar:hover{
+    background-color: #aaa;
+    cursor: pointer;
+    transition: 0.5s all;
+    width: 130px;
+}
+menu{
+    overflow: auto;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin: 0px 5px;
+    padding: 0px;
+}
+ul#menu_usuario{
+    margin: 0px;
+    padding: 0px;
+}
+ul#menu_usuario li{
+    margin: 0px;
+    padding: 5px;
+    list-style-type: none;
+    float: left;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: #eee;
+}
+ul#menu_usuario li:hover{
+    background-color: #aaa;
+}
+ul#menu_usuario li a{
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+#foto_usuario{
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    box-shadow: 0px 0px 5px 0px #aaa;
+    margin: 5px;
+}
+
+#foto_instalacion{
+    height: 160px;
+    width: 160px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 5px 0px #aaa;
+    margin: 5px;
+    float: right;
+}
+#datos_usuario{
+    position: static;
+    top:40px;
+    left: 100px;
+}
+#formulario_actualizar_foto{
+    display: none;
+}
+
+#reserva_propia{
+    background-color: lightsalmon;
+}
+
+#tables{
+    border: 10px solid red;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    position: inherit;
+}
+
+caption#tables{
+    size: 3em;
+    text-height: 3em;
+    border: 1px solid black;
+}
+
+td, th, tr#tables {
+    align-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+
+.MensajesFlash{
+    display: inline-block;
+    flex-direction: column;
+    color: red;
+    position: relative;
+    float:left;
+    
+}
+
+.displayNone{
+    display: none !important;
+   
+}

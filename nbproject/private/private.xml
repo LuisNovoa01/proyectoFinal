@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/.htaccess</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/modelos/ArticuloDAO.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/controladores/ControladorArticulo.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/controladores/ControladorUsuario.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/vistas/insertar_articulo.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/vistas/mis_articulos.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/vistas/ver_articulo.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/config.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/vistas/registrar.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/vistas/template.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/modelos/Session.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/web/index.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoFinal/app/vistas/inicio.php</file>
+        </group>
+    </open-files>
+</project-private>

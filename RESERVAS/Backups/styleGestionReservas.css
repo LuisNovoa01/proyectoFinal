@@ -1,0 +1,157 @@
+
+            header{
+                overflow: auto;
+            }
+            #usuario,#login{
+                display: block;
+                flex-direction: column;
+                float: right;
+                position: relative;
+            }
+            #login input{
+                margin-top: 5px;
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            #login #botones{
+                display: flex;
+                justify-content: space-around;
+              
+                
+            }
+            #titulo{
+                margin-right: 300px;
+                text-align: center;
+            }
+            .boton_formulario{
+                border:1px solid black;
+                box-sizing: border-box;
+                display: inline-block;
+                padding: 3px;
+                background-color: #eee;
+                text-decoration: none;
+                color:black;
+
+            }
+            .fotos_articulo{
+                height: 100px;
+                background-size: contain;
+                background-position: center;
+                background-repeat:no-repeat;
+            }
+            .articulo_listado{
+                float: left;
+                min-height: 200px;
+                border: 1px solid black;
+                margin: 5px;
+                padding: 5px;
+                position: relative;
+                width: 150px;
+            }
+            .papelera{
+                height: 20px;
+                opacity: 0.5;
+            }
+            .papelera:hover{
+                opacity: 1;
+            }
+            .borrar_articulo{
+                position: absolute;
+                bottom:5px;
+                right:5px;
+                width: 20px;
+                height: 20px;
+            }
+            main{
+                overflow: auto;
+            }
+            .precio_articulo{
+
+                font-weight: bold;
+                color:#f00;
+                width: 100px;
+                padding: 3px;
+                text-align: center;
+                margin: auto;
+                font-family: verdana;
+            }
+            .contactar{
+                font-size: 1em;
+                font-weight: bold;
+                color:#00f;
+                border: 1px solid black;
+                width: 120px;
+                padding: 3px;
+                border-radius: 50px;
+                text-align: center;
+                margin: 5px auto;   
+                font-family: verdana;
+            }
+            .contactar:hover{
+                background-color: #aaa;
+                cursor: pointer;
+                transition: 0.5s all;
+                width: 130px;
+            }
+            menu{
+                overflow: auto;
+                border-bottom: 1px solid black;
+                border-top: 1px solid black;
+                margin: 0px 5px;
+                padding: 0px;
+            }
+            ul#menu_usuario{
+                margin: 0px;
+                padding: 0px;
+            }
+            ul#menu_usuario li{
+                margin: 0px;
+                padding: 5px;
+                list-style-type: none;
+                float: left;
+                border: 1px solid white;
+                cursor: pointer;
+                background-color: #eee;
+            }
+            ul#menu_usuario li:hover{
+                background-color: #aaa;
+            }
+            ul#menu_usuario li a{
+                text-decoration: none;
+                color:black;
+                cursor: pointer;
+            }
+            #foto_usuario{
+                height: 80px;
+                width: 80px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 40px;
+                box-shadow: 0px 0px 5px 0px #aaa;
+                margin: 5px;
+            }
+            #datos_usuario{
+                position: static;
+                top:40px;
+                left: 100px;
+            }
+            #formulario_actualizar_foto{
+                display: none;
+            }
+            
+            #reserva_propia{
+                background-color: lightsalmon;
+            }
+
+            #tables{
+                border: 10px solid red;
+                padding: 200px;
+                margin:200px;
+            }
+            
+            .tr{
+                border: 10px solid red;
+                padding: 200px;
+                margin:200px;
+            }
