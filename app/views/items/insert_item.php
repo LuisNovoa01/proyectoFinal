@@ -5,11 +5,11 @@
 
 
 <script type="text/javascript">
-$(function() {
-    $("#descripcion").jqte();
-});
+    $(function() {
+        $("#descripcion").jqte();
+    });
 </script>
-<form class="row g-3 col-md-11" action="" method="post" enctype="multipart/form-data">
+<form class="row g-3 col-md-12" action="" method="post" enctype="multipart/form-data">
     <div class="col-md-3 col-6">
         <label for="inputUser" class="form-label">Usuario</label>
         <input type="text" class="form-control" id="inputUser"  readonly>
@@ -43,7 +43,7 @@ $(function() {
     <div class="col-md-6">
         <label for="inputDescription" class="form-label">Descripcion</label>
         <textarea type="textarea" class="form-control" name="inputDescription" id="description"
-            placeholder="Descripción..."></textarea>
+        placeholder="Descripción..."></textarea>
     </div>
     <div class="col-12" hidden>
         <label for="inputLocation" class="form-label">Localización</label>
@@ -52,13 +52,13 @@ $(function() {
     <div class="col-6">
         <label for="inputDepartment" class="form-label">Departamento</label>
         <select class="form-control" id="inputDepartment" name="inputDepartment" required>
-                            <option value="">Seleccione un departamento</option>
-                            <?php foreach ($departments as $d): ?>
-                            <option value="<?= $d->getId() ?>"
-                                <?= $d->getId_department() == $d->getId() ?>>
-                                <?= $d->getName() ?></option>
-                            <?php endforeach; ?>
-                        </select>
+            <option value="">Seleccione....</option>
+
+            <?php foreach ($departments as $department): ?>
+                <option value="<?php echo $department->idDepartment  ?>"><?php echo $department->name; ?></option>
+            <?php endforeach; ?>
+
+        </select>
     </div>
     <div class="col-6">
         <label for="inputService" class="form-label">Servicio</label>
@@ -76,8 +76,6 @@ $(function() {
         <label for="inputPhotoItem" class="form-label">Sube una foto del Item</label>
         <input type="file" class="form-control" name="inputPhotoItem[]" id="photoItem" multiple="multiple">
     </div>
-
-
     <div class="col-12">
         <button type="submit" class="btn btn-primary">Agregar Item</button>
     </div>

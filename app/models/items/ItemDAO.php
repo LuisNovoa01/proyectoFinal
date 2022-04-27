@@ -140,6 +140,20 @@ class ItemDAO {
      
     }
 
+    public function listar_departamentos() { //: Usuario especifica el tipo de datos que va a devolver pero no es obligatorio ponerlo
+        $sql = "SELECT *  FROM departments";
+        if (!$result = $this->conn->query($sql)) {
+            die("Error en la SQL: " . $this->conn->error);
+        }
+        $array_obj_departament = array();
+        while ($department = $result->fetch_object()) {
+            $array_obj_departament[] = $department;
+        }
+       // $var1 = json_encode($array_obj_departament);
+        return $array_obj_departament;
+     
+    }
+
     
 
     /**

@@ -12,6 +12,9 @@ class ItemsController {
         $_SESSION['token'] = md5(time() + rand(0, 999));
         $token = $_SESSION['token'];
 
+        
+
+
         require '../app/views/items/items_list.php';
     }
 
@@ -26,7 +29,7 @@ class ItemsController {
        /*Se realizara la consulta de todos los datos
             Es importante que se nombren todos los datos en la consulta
        */
-        $busqueda = mysqli_prepare($conn,"SELECT id, name, description, location, id_department, id_service, id_attendUser, id_clientUser, id_user, state, date, hour, duration, registrationDate FROM items WHERE id = $id");
+            $busqueda = mysqli_prepare($conn,"SELECT id, name, description, location, id_department, id_service, id_attendUser, id_clientUser, id_user, state, date, hour, duration, registrationDate FROM items WHERE id = $id");
             mysqli_stmt_execute($busqueda);
             mysqli_stmt_store_result($busqueda);
             mysqli_stmt_bind_result($busqueda, $id, $name, $description, $location, $id_department, $id_service, $id_attendUser, $id_clientUser, $id_user, $state, $date, $hour, $duration, $registrationDate);  
@@ -51,11 +54,10 @@ class ItemsController {
                );
 
                }
-        /*El array lo convertiremos en formato JSON para que este sea leido por javascrip*/
-    $vari = json_encode($array_busqueda);
-        echo $vari;
-    }
-    
+                /*El array lo convertiremos en formato JSON para que este sea leido por javascrip*/
+            $vari = json_encode($array_busqueda);
+                echo $vari;
+     }
 
     function borrar() {
         //Comprobamos que el token recibido es igual al que tenemos en la variable de sesión para evitar ataques CSRF
@@ -96,6 +98,8 @@ class ItemsController {
             $conn = ConexionBD::conectar();
             $itemDAO = new ItemDAO($conn);
             $item = new Item();
+
+                  
 
             //Filtramos datos de entrada
             $name = filter_var($_POST['inputName'], FILTER_SANITIZE_SPECIAL_CHARS);
@@ -183,7 +187,19 @@ class ItemsController {
             MensajesFlash::add_message("Se ha insertado el Item correctamente");
             header("Location: " . RUTA);
             die();
+
+
         }
+        /******************/
+        /*Mostrar listados*/
+        /******************/
+
+        //Se llama la conexion y el modelo de Itemdao 
+        $conn = ConexionBD::conectar();
+        $itemDAO = new ItemDAO($conn);
+        //En una variable se guarda el array que deseamos enviar con los datos consultados desde el modelo
+        $departments = $itemDAO->listar_departamentos();
+        
 
         require '../app/views/items/insert_item.php';
     }
@@ -235,15 +251,6 @@ class ItemsController {
 
         require '../app/views/items/update_item.php';
     }
-
-    /*public function findByIdItem($id) { //: Usuario especifica el tipo de datos que va a devolver pero no es obligatorio ponerlo
-        $sql = "SELECT * FROM items WHERE id=$id";
-        if (!$result = $this->conn->query($sql)) {
-            die("Error en la SQL: " . $this->conn->error);
-        }
-        return $result->fetch_object('item');
-     
-    }*/
 
     public function download_csv_files() {
         $sql = "SELECT *,date_format(date,'%e/%c/%Y') as date FROM items ORDER BY id DESC";
